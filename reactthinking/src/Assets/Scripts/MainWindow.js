@@ -1,18 +1,13 @@
 import React from 'react';
 import database from '../../JSONDatabase/ProductsDatabase.json';
+import ProductsContainer from './ProductsContainer';
 
 
 class MainWindow extends React.Component {
-    constructor(props) {
-        super(props)
-
-
-    }
-
     render(){
         return(
             <div>
-                <img src={database[0]["productImg"]}/>
+                <ProductsContainer/>
             </div>
         )
     }
