@@ -8,9 +8,9 @@ class Product extends React.Component{
 
     render(){
         return (<div>
-            <ProductLabel index={0}/>
-            <ProductPicture index={0}/>
-            <ProductTitle index={0}/>
+            <ProductLabel index={this.props.index}/>
+            <ProductPicture index={this.props.index}/>
+            <ProductTitle index={this.props.index}/>
         </div>)
     }
 }
