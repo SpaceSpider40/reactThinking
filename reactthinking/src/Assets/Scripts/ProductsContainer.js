@@ -19,7 +19,7 @@ class ProductsContainer extends React.Component{
         }
         this.setState({
             monthSelector: month
-            })
+        })
     }
 
     render(){
