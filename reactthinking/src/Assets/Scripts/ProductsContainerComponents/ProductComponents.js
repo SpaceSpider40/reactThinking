@@ -6,7 +6,7 @@ export function ProductLabel(props){
 }
 
 export function ProductPicture(props){
-    return <img className={style.ProductPicture} alt="Product image" src={productsDatabase[props.index]["productImg"]}/>
+    return <img className={style.ProductPicture} alt="Product" src={productsDatabase[props.index]["productImg"]}/>
 }
 
 export function ProductTitle(props){
