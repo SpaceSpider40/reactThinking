@@ -1,6 +1,7 @@
 import React from "react";
 import Product from "./Product";
 import database from '../../../JSONDatabase/ProductsDatabase.json'
+import style from '../../Style/mainStyle.module.css'
 
 class ProductsTable extends React.Component{
     constructor(props) {
@@ -19,9 +20,6 @@ class ProductsTable extends React.Component{
             searchQuery: props.searchQuery,
             selectedMonth: props.selectedMonth
         })
-
-        console.log(props.selectedMonth)
-
         this.updateTable(props.searchQuery)
     }
 
@@ -85,8 +83,8 @@ class ProductsTable extends React.Component{
 
     render(){
         return(
-            <div>
-                {this.state.productList.map((item, index)=>(<div key={index}>{item}</div>))}
+            <div className={style.productContainer}>
+                {this.state.productList.map((item, index)=>(<div className={style.productOuter} key={index}>{item}</div>))}
             </div>
         )
     }

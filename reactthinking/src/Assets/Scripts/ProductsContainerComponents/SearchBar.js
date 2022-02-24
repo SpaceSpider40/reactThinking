@@ -25,7 +25,7 @@ class SearchBar extends React.Component{
     }
 
     handleClickMonths(month){
-        this.props.handleSearchBarInput(null, month);
+        this.props.handleSearchBarInput("", month);
     }
 
     render(){

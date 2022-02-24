@@ -38,10 +38,17 @@
   border: none;
   color: gray;
   font-size: 1.5rem;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
 }
 
 .searchBar input:focus {
   outline: none;
+  background-color: #e1d7f8;
+}
+
+.searchBar input:hover {
+  background-color: #e1d7f8;
 }
 
 .searchBar button {
@@ -54,11 +61,17 @@
   font-size: 1.5rem;
   padding-bottom: 4px;
   padding-top: 0px;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+.searchBar button:hover {
+  background-color: #e1d7f8;
 }
 
 .monthsBar {
   background-color: #7152c7;
-  width: 100%;
+  width: 99%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,5 +95,60 @@
   font-size: 1.2rem;
   -webkit-transition-duration: 0.6s;
           transition-duration: 0.6s;
+  overflow: hidden;
+}
+
+.monthsBar button:hover {
+  background-color: #e1d7f8;
+}
+
+.productContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 10px;
+  background-color: #b19deb;
+}
+
+.productOuter {
+  margin: 5px;
+  border: 5px solid #7152c7;
+  padding: 10px;
+  width: 20%;
+  background-color: #7152c7;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ProductLabel {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.ProductPicture {
+  text-align: center;
+}
+
+.ProductPicture img {
+  width: 50%;
+}
+
+.ProductTitle {
+  text-align: center;
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=mainStyle.module.css.map */

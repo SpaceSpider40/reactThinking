@@ -12,11 +12,9 @@ class ProductsContainer extends React.Component{
     }
 
     handleSearchBarInput = (Data, month) =>{
-        if(Data!=null){
-            this.setState({
+        this.setState({
             searchQuery: Data
-            })
-        }
+        })
         this.setState({
             monthSelector: month
         })

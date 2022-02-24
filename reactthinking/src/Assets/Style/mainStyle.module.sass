@@ -1,4 +1,6 @@
 $color1: #7152c7;
+$color2: #e1d7f8;
+$color3: #b19deb;
     
 .searchBarContainer
     display: flex
@@ -20,8 +22,12 @@ $color1: #7152c7;
         border: none
         color: gray
         font-size: 1.5rem
+        transition-duration: 0.6s
         &:focus
             outline: none
+            background-color: $color2
+        &:hover
+            background-color: $color2
         
     button
         text-align: center
@@ -33,10 +39,13 @@ $color1: #7152c7;
         font-size: 1.5rem
         padding-bottom: 4px;
         padding-top: 0px;
+        transition-duration: 0.6s
+        &:hover
+            background-color: $color2
 
 .monthsBar
     background-color: $color1
-    width: 100%
+    width: 99%
     display: flex
     justify-content: space-evenly
     flex-direction: row
@@ -50,3 +59,38 @@ $color1: #7152c7;
         border-width: none
         font-size: 1.2rem
         transition-duration: 0.6s
+        overflow: hidden
+        &:hover
+            background-color: $color2
+
+.productContainer
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    padding: 10px
+    background-color: $color3
+
+.productOuter
+    margin: 5px
+    border: 5px solid $color1
+    padding: 10px
+    width: 20%
+    background-color: $color1
+
+.product
+    display: flex
+    flex-direction: column
+
+.ProductLabel
+    text-align: center
+    font-size: 1.4rem
+    font-weight: 600
+
+.ProductPicture
+    text-align: center
+    img
+        width: 50%
+
+.ProductTitle
+    text-align: center
+    font-size: 1.4rem
