@@ -36,18 +36,18 @@ class SearchBar extends React.Component{
                     <button onClick={()=>this.handleClick()}>&times;</button>
                 </div>
                 <div className={style.monthsBar}>
-                    <button onClick={()=>this.handleClickMonths(1)}>Styczeń</button>
-                    <button onClick={()=>this.handleClickMonths(2)}>Luty</button>
-                    <button onClick={()=>this.handleClickMonths(3)}>Marzec</button>
-                    <button onClick={()=>this.handleClickMonths(4)}>Kwiecień</button>
-                    <button onClick={()=>this.handleClickMonths(5)}>Maj</button>
-                    <button onClick={()=>this.handleClickMonths(6)}>Czerwiec</button>
-                    <button onClick={()=>this.handleClickMonths(7)}>Lipiec</button>
-                    <button onClick={()=>this.handleClickMonths(8)}>Sierpień</button>
-                    <button onClick={()=>this.handleClickMonths(9)}>Wrzesień</button>
-                    <button onClick={()=>this.handleClickMonths(10)}>Październik</button>
-                    <button onClick={()=>this.handleClickMonths(11)}>Listopad</button>
-                    <button onClick={()=>this.handleClickMonths(12)}>Grudzień</button>
+                    <button onClick={()=>this.handleClickMonths(1)}>January</button>
+                    <button onClick={()=>this.handleClickMonths(2)}>February</button>
+                    <button onClick={()=>this.handleClickMonths(3)}>March</button>
+                    <button onClick={()=>this.handleClickMonths(4)}>April</button>
+                    <button onClick={()=>this.handleClickMonths(5)}>May</button>
+                    <button onClick={()=>this.handleClickMonths(6)}>June</button>
+                    <button onClick={()=>this.handleClickMonths(7)}>July</button>
+                    <button onClick={()=>this.handleClickMonths(8)}>August</button>
+                    <button onClick={()=>this.handleClickMonths(9)}>September</button>
+                    <button onClick={()=>this.handleClickMonths(10)}>October</button>
+                    <button onClick={()=>this.handleClickMonths(11)}>November</button>
+                    <button onClick={()=>this.handleClickMonths(12)}>December</button>
                 </div>
             </div>
         )
