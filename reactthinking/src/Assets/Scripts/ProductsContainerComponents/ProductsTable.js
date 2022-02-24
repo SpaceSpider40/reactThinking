@@ -7,28 +7,86 @@ class ProductsTable extends React.Component{
         super(props)
 
         this.state = {
-            sort: ""
+            searchQuery: "",
+            productList: [],
+            selectedMonth: null
         }
+        this.popProductsTable()
+    }
+
+    componentWillReceiveProps (props){
+        this.setState({
+            searchQuery: props.searchQuery,
+            selectedMonth: props.selectedMonth
+        })
+
+        console.log(props.selectedMonth)
+
+        this.updateTable(props.searchQuery)
     }
 
     popProductsTable(){
-        var productArray = [];
-
-        
         for (var key in database) {
             if (database.hasOwnProperty(key)) {
-                productArray.push(<Product index={key}/>)
+                this.setState({
+                    productList: this.state.productList.push(<Product key={key} index={key}/>)
+                })
             }
         }
-        
-        return productArray
+    }
+
+    updateTable(searchQuery){
+        this.setState({
+            productList: this.state.productList = []
+        })
+        for (var key in database) {
+            if (database.hasOwnProperty(key)) {
+                switch(searchQuery){
+                    case "":
+                        if(this.state.selectedMonth!==null&&this.state.selectedMonth.toString()===database[key]["releaseDate"]){
+                            this.state.productList.push(<Product key={key} index={key}/>)
+                        }else if(this.state.selectedMonth===null){
+                            this.state.productList.push(<Product key={key} index={key}/>)
+                        }
+                    break;
+                    case "premiere":
+                    case "Premiere":
+                        if(database[key]["label"]==="Premiere"){
+                            if(this.state.selectedMonth!==null&&this.state.selectedMonth.toString()===database[key]["releaseDate"]){
+                                this.state.productList.push(<Product key={key} index={key}/>)
+                            }else if(this.state.selectedMonth===null){
+                                this.state.productList.push(<Product key={key} index={key}/>)
+                            }
+                        }
+                    break;
+                    case "reprint":
+                    case "Reprint":
+                        if(database[key]["label"]==="Reprint"){
+                            if(this.state.selectedMonth!==null&&this.state.selectedMonth.toString()===database[key]["releaseDate"]){
+                                this.state.productList.push(<Product key={key} index={key}/>)
+                            }else if(this.state.selectedMonth===null){
+                                this.state.productList.push(<Product key={key} index={key}/>)
+                            }
+                        }
+                    break;
+                    default:
+                        if(database[key]["productTitle"].includes(searchQuery)){
+                            if(this.state.selectedMonth!==null&&this.state.selectedMonth.toString()===database[key]["releaseDate"]){
+                                this.state.productList.push(<Product key={key} index={key}/>)
+                            }else if(this.state.selectedMonth===null){
+                                this.state.productList.push(<Product key={key} index={key}/>)
+                            }
+                        }
+                    break;
+               }
+            }
+        }
     }
 
     render(){
-        
         return(
             <div>
-                {this.popProductsTable().map((item, index)=>(<div key={index}>{item}</div>))}
+                {this.state.productList.map((item, index)=>(<div key={index}>{item}</div>))}
             </div>
         )
     }
