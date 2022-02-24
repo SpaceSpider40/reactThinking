@@ -21,11 +21,13 @@ class SearchBar extends React.Component{
     handleClick(){
         this.setState({searchQuery: ""})
 
-        this.props.handleSearchBarInput("");
+        this.props.handleSearchBarInput("")
+
+        this.handleClickMonths(null)
     }
 
     handleClickMonths(month){
-        this.props.handleSearchBarInput("", month);
+        this.props.handleSearchBarInput("", month)
     }
 
     render(){

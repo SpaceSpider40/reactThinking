@@ -10,17 +10,17 @@ class ProductsTable extends React.Component{
         this.state = {
             searchQuery: "",
             productList: [],
-            selectedMonth: null
+            selectedMonth: props.selectedMonth
         }
         this.popProductsTable()
     }
 
     componentWillReceiveProps (props){
-        this.setState({
-            searchQuery: props.searchQuery,
-            selectedMonth: props.selectedMonth
-        })
+        
+        this.state.searchQuery = props.searchQuery
+        this.state.selectedMonth = props.selectedMonth
         this.updateTable(props.searchQuery)
+        
     }
 
     popProductsTable(){
