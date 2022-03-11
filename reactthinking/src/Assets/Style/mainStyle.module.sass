@@ -2,6 +2,11 @@ $color1: #7152c7;
 $color2: #bcb1d8;
 $color3: #b19deb;
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+*
+    font-family: 'League Spartan', sans-serif
+
 body
     background-color: $color3
     
@@ -11,6 +16,7 @@ body
     justify-items: center
     align-items: center
     height: 8em
+
 .searchBar
     display: flex
     flex-direction: row
@@ -39,12 +45,13 @@ body
         margin: 0px
         border: none
         border-width: none
-        font-size: 1.5rem
+        font-size: 2.5rem
         padding-bottom: 4px;
         padding-top: 0px;
         transition-duration: 0.6s
         &:hover
             background-color: $color2
+            cursor: pointer
 
 .monthsBar
     background-color: $color1
@@ -64,36 +71,81 @@ body
         transition-duration: 0.6s
         color: #2e2e2e
         overflow: hidden
+        transition-duration: 0.2s
         &:hover
             background-color: $color2
+            cursor: pointer
+            transform: scale(1.1)
 
 .productContainer
+    
+.productCategoryLabel
+    width: 100%
+    font-size: 3rem
+    padding: 10px
+    padding-bottom: 2px
+    color: $color1
+    border-bottom: 2px $color1 solid
+    margin-bottom: 20px
+
+.productCategory
     display: flex
     flex-wrap: wrap
     justify-content: space-evenly
     padding: 10px
+    height: 100%
 
 .productOuter
-    margin: 5px
+    margin: 20px
     border: 5px solid $color1
     padding: 10px
     width: 20%
+    height: 30em
     background-color: $color1
+    transition-duration: 0.2s
+    &:hover
+        transform: scale(1.05)
 
 .product
     display: flex
     flex-direction: column
     justify-content: space-between
     height: 100%
+    &:hover
+        cursor: pointer;
+
+.productTitleConcentrator
+    margin-top: 5px
+    border: 2px solid $color3
+    background-color: $color3
 
 .ProductLabel
+    color: $color1
     text-align: center
-    font-size: 1.4rem
+    font-size: 2.2rem
     font-weight: 600
+    letter-spacing: 0.1rem
+    background-color: $color3
 
 .ProductPicture
     text-align: center
+    background-color: $color2
+    height: 100%
 
 .ProductTitle
     text-align: center
     font-size: 1.4rem
+    background-color: $color3
+    font-weight: 600
+    color: $color1
+    margin-bottom: 5px
+
+.ProductMonth
+    color: $color1
+    font-weight: 300
+    border-top: 2px solid $color1
+    text-align: center
+    font-size: 1.4rem
+    background-color: $color3
+    padding: 5px
+    margin-top: 0px
