@@ -34,7 +34,7 @@ class SearchBar extends React.Component{
         return(
             <div className={style.searchBarContainer} >
                 <div className={style.searchBar}>
-                    <input placeholder="Enter search pharse here" type="text" name="searchQuery" value={this.state.searchQuery} onChange={this.handleChange}/>
+                    <input placeholder="Enter search pharse here, you can also type years you want to search by" type="text" name="searchQuery" value={this.state.searchQuery} onChange={this.handleChange}/>
                     <button onClick={()=>this.handleClick()}>&times;</button>
                 </div>
                 <div className={style.monthsBar}>

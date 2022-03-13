@@ -141,23 +141,15 @@ body {
   height: 100%;
 }
 
-.productOuter {
+.product {
   margin: 20px;
   border: 5px solid #7152c7;
   padding: 10px;
   width: 20%;
-  height: 30em;
+  height: 35em;
   background-color: #7152c7;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-}
-
-.productOuter:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.product {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,6 +165,8 @@ body {
 
 .product:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .productTitleConcentrator {
@@ -186,7 +180,6 @@ body {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 600;
-  letter-spacing: 0.1rem;
   background-color: #b19deb;
 }
 
